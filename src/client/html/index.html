@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aimduelz.io</title>
+  </head>
+  <body>
+    <div id="game-menu">
+      <h1 class="menu-text">Main Menu</h1>
+      <hr class="divider" />
+      <h5 class="sub-text">
+        Challenge your friends to see who has the quickest aim.
+      </h5>
+      <div class="input-layout">
+        <button id="start-button" class="play-button">Play Solo!</button>
+        <button id="create-button">Create Room</button>
+        <div class="joinRoom-layout">
+          <input id="code-input" placeholder="Enter Room Code" />
+          <button id="join-button" class="private-button">
+            Join Room
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="lobby" class="hidden">
+      <h1 class="menu-text">Your room code: <span id="room-code"></span></h1>
+      <hr class="divider" />
+      <h5 class="sub-text">
+        Send the above code to your challenger to face them in an aim duel.
+      </h5>
+      <h2 id="ready-message"></h2>
+      <div class="input-layout">
+        <button id="start-room" disabled>Start Game</button>
+        <button id="back-button">Back to Main</button>
+      </div>
+    </div>
+    <div id="game-over" class="hidden">
+      <h1>Your average reaction time was:</h1>
+      <h1 id="rtime-text"></h1>
+      <button id="replay-button">Replay</button>
+      <button id="back-button">Back to Main</button>
+    </div>
+    <canvas></canvas>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "name": "rocketzio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "io game",
+  "main": "src/server/index.js",
+  "scripts": {
+    "start": "node src/server/server.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jyotirsai/rocketzio.git"
+  },
+  "author": "Jyotir Sai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jyotirsai/rocketzio/issues"
+  },
+  "homepage": "https://github.com/jyotirsai/rocketzio#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "dotenv": "^8.2.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "socket.io": "^3.0.4",
+    "socket.io-client": "^3.0.4"
+  },
+  "devDependencies": {
+    "@webpack-cli/update": "^0.1.8",
+    "css-loader": "^5.0.1",
+    "express": "^4.17.1",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.3.3",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-middleware": "^4.0.2",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.7.3"
+  }
+}
