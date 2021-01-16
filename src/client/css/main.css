@@ -118,6 +118,15 @@ input:focus {
   text-align: center;
 }
 
+#mgame-over {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #e0e0e0;
+  text-align: center;
+}
+
 #replay-button {
   background-color: #0051ff;
 }

@@ -7,9 +7,10 @@ const socket = io(`http://localhost:3000`);
 const gameMenu = document.getElementById("game-menu");
 const playButton = document.getElementById("start-button");
 const gameOverDiv = document.getElementById("game-over");
+const mGameOverDiv = document.getElementById("mgame-over");
 const replayButton = document.getElementById("replay-button");
 const rTimeText = document.getElementById("rtime-text");
-const backButton = document.getElementById("back-button");
+const endText = document.getElementById("endgame-text");
 const createButton = document.getElementById("create-button");
 const joinButton = document.getElementById("join-button");
 const lobby = document.getElementById("lobby");
@@ -191,10 +192,6 @@ function handleGameOver(state) {
     gameOverDiv.classList.add("hidden");
     playSolo();
   };
-  backButton.onclick = () => {
-    gameOverDiv.classList.add("hidden");
-    gameMenu.style.display = "block";
-  };
 }
 
 function handleMGameOver(state) {
@@ -203,18 +200,10 @@ function handleMGameOver(state) {
   state = JSON.parse(state);
   playerOneTime = calculateReactionTime(state.playerOneTimes);
   playerTwoTime = calculateReactionTime(state.playerTwoTimes);
-  gameOverDiv.classList.remove("hidden");
+  mGameOverDiv.classList.remove("hidden");
   if (playerOneTime > playerTwoTime) {
-    rTimeText.innerText = "player two wins!";
+    endText.innerText = "player two wins!";
   } else if (playerOneTime < playerTwoTime) {
-    rTimeText.innerText = "player one wins!";
+    endText.innerText = "player one wins!";
   }
-
-  replayButton.onclick = () => {
-    gameOverDiv.classList.add("hidden");
-  };
-  backButton.onclick = () => {
-    gameOverDiv.classList.add("hidden");
-    gameMenu.style.display = "block";
-  };
 }
