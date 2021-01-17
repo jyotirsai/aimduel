@@ -19,8 +19,7 @@ if (process.env.NODE_ENV === "development") {
   app.use(express.static("dist"));
 }
 
-const server = app.listen(PORT);
-console.log(`Server is running on port ${PORT}`);
+const server = app.listen(process.env.PORT || 3000);
 
 const io = socketio(server);
 

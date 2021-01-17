@@ -2,7 +2,7 @@ import Target from "./Target.js";
 import "./css/main.css"; // need this for webpack
 import io from "socket.io-client";
 
-const socket = io(`http://localhost:3000`);
+const socket = io(`https://stormy-spire-67616.herokuapp.com/`);
 
 const gameMenu = document.getElementById("game-menu");
 const playButton = document.getElementById("start-button");
