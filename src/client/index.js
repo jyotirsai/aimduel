@@ -96,6 +96,7 @@ function playMulti() {
 }
 
 function handleInitMulti() {
+  mGameOverDiv.classList.add("hidden");
   initMulti();
 }
 
