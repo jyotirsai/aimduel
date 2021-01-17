@@ -9,6 +9,7 @@ const playButton = document.getElementById("start-button");
 const gameOverDiv = document.getElementById("game-over");
 const mGameOverDiv = document.getElementById("mgame-over");
 const replayButton = document.getElementById("replay-button");
+const soloBackButton = document.getElementById("solo-back-button");
 const rTimeText = document.getElementById("rtime-text");
 const endText = document.getElementById("endgame-text");
 const createButton = document.getElementById("create-button");
@@ -18,6 +19,9 @@ const roomCode = document.getElementById("room-code");
 const startRoom = document.getElementById("start-room");
 const codeInput = document.getElementById("code-input");
 const readyMessage = document.getElementById("ready-message");
+const mReplayButton = document.getElementById("mreplay-button");
+const mBackButton = document.getElementById("mback-button");
+const lobbyBack = document.getElementById("lobby-back-button");
 
 // globals
 let canvas, ctx;
@@ -54,6 +58,31 @@ joinButton.onclick = () => {
 startRoom.onclick = () => {
   socket.emit("roomCode", roomCode.innerText);
   playMulti();
+};
+
+replayButton.onclick = () => {
+  gameOverDiv.classList.add("hidden");
+  playSolo();
+};
+
+soloBackButton.onclick = () => {
+  gameOverDiv.classList.add("hidden");
+  gameMenu.style.display = "block";
+};
+
+mReplayButton.onclick = () => {
+  socket.emit("roomCode", roomCode.innerText);
+  playMulti();
+};
+
+mBackButton.onclick = () => {
+  mGameOverDiv.classList.add("hidden");
+  gameMenu.style.display = "block";
+};
+
+lobbyBack.onclick = () => {
+  lobby.classList.add("hidden");
+  gameMenu.style.display = "block";
 };
 
 function playSolo() {
@@ -188,10 +217,6 @@ function handleGameOver(state) {
   avgReactionTime = calculateReactionTime(state.playerOneTimes);
   gameOverDiv.classList.remove("hidden");
   rTimeText.innerText = avgReactionTime + " ms";
-  replayButton.onclick = () => {
-    gameOverDiv.classList.add("hidden");
-    playSolo();
-  };
 }
 
 function handleMGameOver(state) {

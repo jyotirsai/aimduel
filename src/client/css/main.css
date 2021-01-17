@@ -131,11 +131,23 @@ input:focus {
   background-color: #0051ff;
 }
 
+#mreplay-button {
+  background-color: #0051ff;
+}
+
 #create-button {
   background-color: #ce8d00;
 }
 
-#back-button {
+#solo-back-button {
+  background-color: #c70032;
+}
+
+#mback-button {
+  background-color: #c70032;
+}
+
+#lobby-back-button {
   background-color: #c70032;
 }
 
