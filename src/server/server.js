@@ -9,6 +9,7 @@ const { makeid } = require("./utils");
 dotenv.config();
 
 const app = express();
+const PORT = process.env.PORT;
 const server = app.listen(PORT || 3000);
 const socketio = require("socket.io");
 app.use(express.static("public"));
