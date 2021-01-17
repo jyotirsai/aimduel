@@ -71,6 +71,7 @@ soloBackButton.onclick = () => {
 };
 
 mReplayButton.onclick = () => {
+  mGameOverDiv.classList.add("hidden");
   socket.emit("roomCode", roomCode.innerText);
   playMulti();
 };
