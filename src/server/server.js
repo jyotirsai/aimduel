@@ -3,13 +3,14 @@ const webpack = require("webpack");
 const webpackConfig = require("../../webpack.dev.js");
 const webpackDevMiddleware = require("webpack-dev-middleware");
 const dotenv = require("dotenv");
-const socketio = require("socket.io");
+
 const { initGame, randomTarget, initMGame } = require("./Game.js");
 const { makeid } = require("./utils");
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT;
+const server = app.listen(PORT || 3000);
+const socketio = require("socket.io");
 app.use(express.static("public"));
 
 if (process.env.NODE_ENV === "development") {
@@ -19,9 +20,12 @@ if (process.env.NODE_ENV === "development") {
   app.use(express.static("dist"));
 }
 
-const server = app.listen(process.env.PORT || 3000);
-
-const io = socketio(server);
+const io = socketio(server, {
+  cors: {
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"],
+  },
+});
 
 // globals
 let state = {};
