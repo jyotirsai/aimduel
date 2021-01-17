@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jyotirsai/rocketzio.git"
+    "url": "git+https://github.com/jyotirsai/aimduel.git"
   },
   "author": "Jyotir Sai",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jyotirsai/rocketzio/issues"
+    "url": "https://github.com/jyotirsai/aimduel/issues"
   },
-  "homepage": "https://github.com/jyotirsai/rocketzio#readme",
+  "homepage": "https://github.com/jyotirsai/aimduel#readme",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "clean-webpack-plugin": "^3.0.0",
@@ -25,9 +25,7 @@
     "express": "^4.17.1",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "socket.io": "^3.0.4",
-    "socket.io-client": "^3.0.4"
-  },
-  "devDependencies": {
+    "socket.io-client": "^3.0.4",
     "@webpack-cli/update": "^0.1.8",
     "css-loader": "^5.0.1",
     "html-webpack-plugin": "^4.5.0",
