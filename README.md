@@ -6,4 +6,4 @@ Click <a href="https://stormy-spire-67616.herokuapp.com/"> here </a> to play!
 
 Play by yourself by selecting "Play Solo!" or create your own multiplayer room!
 
-<img src="main_menu.png" width="500px" height="500px"/>
+<img src="main_menu.png" />
